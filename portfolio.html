@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curated by KK :: The Magic</title>
+    <meta name="description" content="Curated by KK is a Sacramento-based creative content and event management brand specializing in content creation, event styling, brand experiences, and creative direction.">
+
+    <link rel="stylesheet" href="curated.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Curated by KK Logo" class="logo" width="150" height="50">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">Our Story</a></li>
+                <li><a href="services.html">What We Do</a></li>
+                <li><a href="portfolio.html">The Magic</a></li>
+                <li><a href="contact.html">Let's Create</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="portfolio-page">
+        <section class="portfolio-hero">
+            <span class="section-label">The Magic</span>
+            <h1>A LOOK INTO THE EXPERIENCES WE CURATE.</h1>
+            <p>
+                A collection of creative direction, styled moments, brand visuals,
+                and event experiences brought to life with intention.
+            </p>
+        </section>
+
+        <section class="video-portfolio-grid">
+            <article class="video-card" onclick="openVideo('content-video')">
+                <img src="portfolio1.png" alt="Content Creation">
+                <div>
+                    <span>Content Creation</span>
+                    <h2>Styled Brand Shoot</h2>
+                    <p>Click to watch the content creation preview.</p>
+                </div>
+            </article>
+
+            <article class="video-card" onclick="openVideo('event-video')">
+                <img src="portfolio2.jpg" alt="Event Styling">
+                <div>
+                    <span>Event Styling</span>
+                    <h2>Curated Celebration</h2>
+                    <p>Click to watch the event styling preview.</p>
+                </div>
+            </article>
+
+            <article class="video-card" onclick="openVideo('brand-video')">
+                <img src="portfolio3.jpg" alt="Brand Experience">
+                <div>
+                    <span>Brand Experience</span>
+                    <h2>Launch Moment</h2>
+                    <p>Click to watch the brand experience preview.</p>
+                </div>
+            </article>
+
+            <article class="video-card" onclick="openVideo('creative-video')">
+                <img src="portfolio4.png" alt="Creative Direction">
+                <div>
+                    <span>Creative Direction</span>
+                    <h2>Visual Storytelling</h2>
+                    <p>Click to watch the creative direction preview.</p>
+                </div>
+            </article>
+        </section>
+
+        <div id="content-video" class="video-popup">
+            <div class="video-box">
+                <button onclick="closeVideo('content-video')" class="close-video">&times;</button>
+                <video controls>
+                    <source src="content-creation.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div id="event-video" class="video-popup">
+            <div class="video-box">
+                <button onclick="closeVideo('event-video')" class="close-video">&times;</button>
+                <video controls>
+                    <source src="event-styling.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div id="brand-video" class="video-popup">
+            <div class="video-box">
+                <button onclick="closeVideo('brand-video')" class="close-video">&times;</button>
+                <video controls>
+                    <source src="brand-experience.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div id="creative-video" class="video-popup">
+            <div class="video-box">
+                <button onclick="closeVideo('creative-video')" class="close-video">&times;</button>
+                <video controls>
+                    <source src="creative-direction.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <script>
+            function openVideo(id) {
+                document.getElementById(id).style.display = "flex";
+            }
+
+            function closeVideo(id) {
+                const popup = document.getElementById(id);
+                const video = popup.querySelector("video");
+
+            popup.style.display = "none";
+            video.pause();
+            video.currentTime = 0;
+            }
+        </script>
+        <section class="cta-section">
+            <span class="section-label">Inspired?</span>
+            <h2>LET'S CREATE YOUR MOMENT.</h2>
+            <p>
+                Whether you're planning a shoot, styling an event, or 
+                building a brand experience, Curated by KK is here to 
+                bring your vision to life with intention and style.
+            </p>
+            <a href="contact.html" class="cta-button">BOOK NOW</a>
+        </section>
+        <footer class="footer">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <a href="https://instagram.com/curated.bykk" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <a href="https://tiktok.com/@curatedbykk" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <a href="mailto:kaykay@curatedbykk.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="location">Sacramento, CA</p>
+            <p class="copyright">Copyright © 2026 Curated by KK</p>
+        </footer>
+    </main>
+</body>
+</html>

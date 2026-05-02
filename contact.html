@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curated by KK :: Contact</title>
+    <meta name="description" content="Curated by KK is a Sacramento-based creative content and event management brand specializing in content creation, event styling, brand experiences, and creative direction.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="curated.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Curated Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">Our Story</a></li>
+                <li><a href="services.html">What We Do</a></li>
+                <li><a href="portfolio.html">The Magic</a></li>
+                <li><a href="contact.html">Let's Create</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="contact-hero">
+            <span class="section-label">Booking Inquiries</span>
+            <h1>LET'S CREATE SOMETHING INTENTIONAL.</h1>
+            <p>
+                Ready to bring your vision to life? Fill out the form below for content creation,
+                event styling, brand experiences, or custom creative direction.
+            </p>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-info">
+                <h2>Work With Curated by KK</h2>
+                <p>
+                    Whether you're planning an event, building a brand moment, or creating visual content,
+                    Curated by KK is here to help from concept to creation.
+                </p>
+
+                <p><strong>Email:</strong> kaykay@curatedbykk.com</p>
+                <p><strong>Location:</strong> Sacramento, CA</p>
+            </div>
+
+            <form class="booking-form" method="post" action="#">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="service">What are you interested in? *</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="content-creation">Content Creation</option>
+                    <option value="event-styling">Event Styling</option>
+                    <option value="brand-experience">Brand Experience</option>
+                    <option value="creative-direction">Creative Direction</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="date">Preferred Project/Event Date</label>
+                <input type="date" id="date" name="date">
+
+                <label for="budget">Estimated Budget</label>
+                <input type="text" id="budget" name="budget" placeholder="$500, $1,000+, etc.">
+
+                <label for="message">Tell me about your vision *</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit" class="cta-button">SEND INQUIRY</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contact-grid">
+            <div class="contact-item">
+                <a href="https://instagram.com/curatedbykk" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <a href="https://tiktok.com/@curatedbykk" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <a href="mailto:kaykay@curatedbykk.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <p class="location">Sacramento, CA</p>
+        <p class="copyright">Copyright © 2026 Curated by KK</p>
+    </footer>
+</body>
+</html>
