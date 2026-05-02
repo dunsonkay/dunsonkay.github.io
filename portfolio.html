@@ -76,7 +76,7 @@
         <div id="content-video" class="video-popup">
             <div class="video-box">
                 <button onclick="closeVideo('content-video')" class="close-video">&times;</button>
-                <video controls>
+                <video muted playsinline>
                      <source src="content-creation.MP4" type="video/mp4">
                 </video>
             </div>
@@ -85,7 +85,7 @@
         <div id="event-video" class="video-popup">
             <div class="video-box">
                 <button onclick="closeVideo('event-video')" class="close-video">&times;</button>
-                <video controls>
+                <video muted playsinline>
                     <source src="event-styling.MP4" type="video/mp4">
                 </video>
             </div>
@@ -94,7 +94,7 @@
         <div id="brand-video" class="video-popup">
             <div class="video-box">
                 <button onclick="closeVideo('brand-video')" class="close-video">&times;</button>
-                <video controls>
+                <video muted playsinline>
                     <source src="brand-experience.MP4" type="video/mp4">
                 </video>
             </div>
@@ -103,20 +103,26 @@
         <div id="creative-video" class="video-popup">
             <div class="video-box">
                 <button onclick="closeVideo('creative-video')" class="close-video">&times;</button>
-                <video controls>
+                <video muted playsinline>
                     <source src="creative-direction.MP4" type="video/mp4">
                 </video>
             </div>
         </div>
 
-        <script>
+        <script id="vidplay">
             function openVideo(id) {
-                document.getElementById(id).style.display = "flex";
+            const popup = document.getElementById(id);
+            const video = popup.querySelector("video");
+
+            popup.style.display = "flex";
+
+            video.currentTime = 0;
+            video.play();   // 🔥 forces autoplay
             }
 
             function closeVideo(id) {
-                const popup = document.getElementById(id);
-                const video = popup.querySelector("video");
+            const popup = document.getElementById(id);
+            const video = popup.querySelector("video");
 
             popup.style.display = "none";
             video.pause();
